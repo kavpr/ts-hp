@@ -7,7 +7,7 @@
     <link href="assets/font/Outfit/Outfit-VariableFont_wght.ttf" rel="stylesheet">
     <style media="screen">
       html, body {
-        background-color: #0A0A0A;
+        background-color: #0b0b0b;
         font-family: "Outfit", sans-serif;
         font-optical-sizing: auto;
         font-style: normal;
@@ -42,7 +42,6 @@
         background-repeat: no-repeat;
       }
       header {
-        width: calc(100% - 32px);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -55,6 +54,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        width: 100%;
       }
 
       /* Branding */
@@ -109,7 +109,7 @@
       }
       #os-sshtv1 {
         background-color: rgb(0, 81, 255);
-        padding: 16px 0;
+        /* padding: 16px 0; */
       }
       #os-sshtv1-img {
         display: block;
@@ -133,20 +133,16 @@
       }
       #btn-view-contact-details {
         display: block;
-        background-color: #ff6600;
-        color: #ffffff;
-        border: none;
-        letter-spacing: .1px;
-        font-weight: 750;
-        padding: 16px 64px;
+        border: 4px solid #3876fa;
+        letter-spacing: .5px;
         border-radius: 6px;
         cursor: pointer;
         transition: all ease-in-out 0.3s;
       }
       #btn-view-contact-details:hover {
-        background-color: #aa4400;
+        background-color: #cdcdcd;
       }
-      #btn-our-services {
+      .btn-service-nav {
         background-color: transparent;
         border: none;
         color: #ffffff;
@@ -156,7 +152,7 @@
         letter-spacing: .6px;
         cursor: pointer;
       }
-      #btn-our-services img {
+      .btn-service-nav img {
         transform: scaleY(-1);
         width: 20px;
         height: 20px;
@@ -222,6 +218,7 @@
         justify-content: center;
         height: 527px;
         margin: 0 auto;
+        position: relative;
       }
       #hero-background {
         position: absolute;
@@ -256,7 +253,6 @@
         margin: 36px auto 0 auto;
         display: flex;
         align-items: center;
-        width: fit-content;
       }
       #hero-tagline {
         color: #ffffff;
@@ -264,11 +260,13 @@
       }
       #hero-tagline p {
         margin: 0;
+        letter-spacing: .5px;
+        line-height: 20px;
       }
       .btn-cta {
         font-weight: medium;
         letter-spacing: .2px;
-        border-radius: 1px;
+        border-radius: 4px;
         border: none;
         cursor: pointer;
         background-color: #ff6600;
@@ -297,17 +295,19 @@
         letter-spacing: .2px;
       }
       .service-card {
-        background-color: #000000;
+        background-color: #141414;
         border-radius: 2px;
-        border-bottom: 3px solid transparent;
+        border: none;
       }
       .vsc {
         transition: all ease-in-out .3s;
+        border: 1px solid #ffffff74;
         cursor: help;
+        border-radius: 5px;
       }
       .vsc:hover {
-        background-color: #292929;
-        border-bottom-color: #ff6600;
+        background-color: #000000;
+        border-color: #ff6600;
       }
       .sc-hidden {
         background-color: transparent !important;
@@ -317,18 +317,16 @@
       }
       .service-card p {
         color: #ffffff;
-        letter-spacing: .5px;
-      }
-      .service-header-text {
-        font-weight: bold;
-        letter-spacing: .5px;
+        letter-spacing: .6px;
       }
       .s-p-text {
-        font-weight: lighter;
+        font-weight: 100;
         line-height: 20px;
+        font-size: 14px;
       }
       .s-p-text b {
         font-weight: bold !important;
+        color: #ff6600;
       }
       .service-card ul {
         margin-top: 20px;
@@ -339,12 +337,13 @@
         color: #ffffff;
       }
       .service-card ul li p {
-        font-weight: lighter;
         line-height: 20px;
+        font-size: 14px;
         margin: 0;
       }
       .service-card ul li p b {
         font-weight: bold !important;
+        color: #ff6600;
       }
       #our-services-cta {
         margin: 48px auto 0 auto;
@@ -359,8 +358,9 @@
         gap: 10px;
         color: #ffffff;
         background-color: #000000;
-        letter-spacing: .6px;
+        letter-spacing: .5px;
         font-weight: medium;
+        font-size: 14px;
         border: none;
         padding: 16px;
         cursor: pointer;
@@ -386,8 +386,7 @@
       }
       #process-tagline p {
         color: #ffffff;
-        line-height: 24px;
-        letter-spacing: .6px;
+        letter-spacing: .5px;
       }
       .process-section {
         display: block;
@@ -433,13 +432,13 @@
         cursor: help;
       }
       .process-card:hover {
-        background-color: #202020;
+        background-color: #000000;
         border-color: #ff6600;
       }
       .process-no {
         color: #ffffff;
         font-weight: bolder;
-        font-size: 24px;
+        font-size: 32px;
         letter-spacing: .4px;
         line-height: 24px;
       }
@@ -467,7 +466,7 @@
         line-height: 20px;
         letter-spacing: .5px;
         font-weight: lighter;
-        margin: 12px auto 0 auto;
+        margin: 12px auto 12px auto;
       }
       .ps-next {
         width: 32px;
@@ -519,18 +518,13 @@
         margin: 0 auto;
         width: fit-content;
       }
-      .cu-card {
-        padding: 16px;
-      }
       .cu-card-2 {
         display: flex;
         justify-content: center;
       }
       .cu-header {
-        margin: 0 auto 48px auto;
         display: flex;
         align-items: center;
-        gap: 12px;
       }
       .cu-heading p {
         color: #ffffff;
@@ -686,6 +680,15 @@
         justify-content: right;
         width: 100%;
       }
+      .cvm-footmark img {
+        transform-origin: center; /* Pivot from the center */
+        animation: stutter-spin 2s steps(4) infinite; /* Key: steps(4) for chunked movement */
+      }
+
+      @keyframes stutter-spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
 
       /* Footer */
       #footer {
@@ -744,6 +747,9 @@
 
       /* Very small monitors, older models */
       @media screen and (min-width: 1152px) {
+        header {
+          width: calc(100% - 32px);
+        }
         .header-wrapper {
           min-width: 1088px;
         }
@@ -761,6 +767,7 @@
         }
         #hero-cta {
           gap: 155px;
+          width: fit-content;
         }
         .h-text {
           font-size: 16px;
@@ -787,6 +794,9 @@
         .section-header-text-v1 p {
           font-size: 28px;
         }
+        #os-sshtv1 {
+          padding: 16px 0;
+        }
         #os-sshtv1-img {
           margin: 48px auto 0 auto;
         }
@@ -795,13 +805,14 @@
           letter-spacing: .6px;
         }
         #services {
-          margin-top: 48px;
+          margin-top: 96px;
         }
         .quote {
           font-size: 24px;
         }
         #btn-view-contact-details {
           margin: 96px auto 0 auto;
+          padding: 16px 32px;
           font-size: 14px;
         }
         .service-category {
@@ -822,7 +833,7 @@
         }
         .service-header-text {
           margin: 20px 0;
-          font-size: 16px;
+          font-size: 20px;
         }
         .s-p-text {
           font-size: 13px;
@@ -848,6 +859,7 @@
           margin-bottom: 120px;
         }
         #process-tagline p {
+          line-height: 24px;
           font-size: 16px;
         }
         #process-tagline img {
@@ -879,13 +891,13 @@
           width: 70px;
           width: 70px;
         }
-        #btn-our-services {
+        .btn-service-nav {
           font-size: 24px;
           border-bottom: .5px solid transparent;
           transition: all ease-in-out 0.5s;
           padding-bottom: 4px;
         }
-        #btn-our-services:hover {
+        .btn-service-nav:hover {
           border-bottom-color: white;
         }
         #stack-marquee {
@@ -917,9 +929,12 @@
         .cu-card {
           width: calc(544px - 32px);
           height: calc(524px - 32px);
+          padding: 16px;
         }
         .cu-header {
           width: 100%;
+          margin: 0 auto 48px auto;
+          gap: 12px;
         }
         .cf-field input {
           width: calc(400px - 24px);
@@ -994,34 +1009,11 @@
       }
 
       @media screen and (min-width: 768px) and (max-width: 1024px) {
+        header {
+          width: calc(100% - 32px);
+        }
         .header-wrapper {
           width: 100%;
-        }
-
-        /* Banner */
-        #hero-background {
-          width: 400px;
-          height: 400px;
-        }
-        #heroes {
-          gap: 160px;
-        }
-        #hero-cta {
-          gap: 60px;
-        }
-        .h-text {
-          font-size: 12px;
-        }
-        #hero-tagline p {
-          font-size: 14px;
-        }
-        .btn-cta {
-          padding: 14px 21.5px;
-        }
-
-        /* Services */
-        #our-services {
-          margin: 76px 0 44px 0;
         }
         .section-header-text-v1 {
           gap: 10px;
@@ -1034,6 +1026,36 @@
         .section-header-text-v1 p {
           font-size: 24px;
         }
+
+        /* Hero Section */
+        #hero-background {
+          width: 400px;
+          height: 400px;
+        }
+        #heroes {
+          gap: 160px;
+        }
+        #hero-cta {
+          gap: 60px;
+          width: fit-content;
+        }
+        .h-text {
+          font-size: 12px;
+        }
+        #hero-tagline p {
+          font-size: 16px;
+        }
+        .btn-cta {
+          padding: 14px 16.5px;
+        }
+
+        /* Services */
+        #our-services {
+          margin: 76px 0 44px 0;
+        }
+        #os-sshtv1 {
+          padding: 16px 0;
+        }
         #os-sshtv1-img {
           margin: 32px auto 0 auto;
         } 
@@ -1042,13 +1064,14 @@
           letter-spacing: .4px;
         }
         #services {
-          margin-top: 24px;
+          margin-top: 48px;
         }
         .quote {
           font-size: 20px;
         }
         #btn-view-contact-details {
-          margin: 64px auto 0 auto;
+          margin: 48px auto 0 auto;
+          padding: 16px 32px;
           font-size: 12px;
         }
         .service-category {
@@ -1095,6 +1118,7 @@
           margin-bottom: 96px;
         }
         #process-tagline p {
+          line-height: 24px;
           font-size: 14px;
         }
         #process-tagline img {
@@ -1131,7 +1155,7 @@
           width: 48px;
           width: 48px;
         }
-        #btn-our-services {
+        .btn-service-nav {
           font-size: 20px;
         }
         #stack-marquee {
@@ -1158,13 +1182,19 @@
         }
         .cu-card {
           width: 500px;
-          height: fit-content
+          height: fit-content;
+          padding: 16px;
+        }
+        .cu-card:first-child {
+          margin-bottom: 32px;
         }
         #cu-holder {
           flex-direction: column;
         }
         .cu-header {
           width: 512px;
+          margin: 0 auto 48px auto;
+          gap: 12px;
         }
         .cf-field {
           width: 100%;
@@ -1202,6 +1232,306 @@
           width: 500px;
         }
         #cv-bg {
+          width: 1080px;
+        }
+        .cv-sub-heading-text {
+          margin: 50px 0 0 0;
+          font-size: 18px;
+        }
+        .cv-info {
+          font-size: 14px;
+        }
+        .cv-body-text {
+          width: 100%;
+          font-size: 14px;
+        }
+        .cv-message {
+          margin-top: 32px;
+          width: calc(100% - 32px);
+          height: fit-content;
+          padding: 16px;
+        }
+        .cvm-header-text {
+          font-size: 16px; 
+        }
+        .cvm-body-text {
+          font-size: 14px;
+        }
+
+        /* Footer */
+        .footer-wrapper {
+          width: calc(100% - 64px);
+          min-width: 500px;
+        }
+      }
+
+      @media screen and (min-width: 375px) and (max-width: 767px) {
+        header {
+          width: calc(100% - 32px);
+          min-width: calc(375px - 32px);
+          justify-content: space-between !important;
+        }
+        .header-wrapper {
+          width: 100%;
+        }
+        .mb-toggle-mobile {
+          display: none !important;
+        }
+        #btn-mobile-menu-close {
+          display: flex !important;
+        }
+
+        /* Banner */
+        #banner {
+          position: relative;
+        }
+
+        /* Hero Section */
+        #hero-section {
+          overflow: hidden;
+        }
+        #hero-background {
+          width: 690px;
+          height: 690px;
+        }
+        #heroes {
+          gap: 16px;
+        }
+        #hero-cta {
+          gap: 16px;
+          width: calc(100% - 32px);
+          align-items: start;
+        }
+        .hero {
+          height: 320px;
+        }
+        #hero-cta {
+          flex-direction: column;
+        }
+        #hero-tagline p {
+          font-size: 16px;
+        }
+        .btn-cta:first-child {
+          margin-top: 0 !important;
+        }
+        .btn-cta {
+          margin-top: 16px;
+          padding: 16px 12px;
+          font-size: 16px;
+          letter-spacing: .5px;
+        }
+        #hero-cta-buttons {
+          display: flex;
+          flex-direction: column;
+        }
+        #hero-cta-buttons {
+          width: 100%;
+        }
+
+        /* Services */
+        #our-services {
+          margin: 76px 0 44px 0;
+        }
+        .section-header-text-v1 {
+          gap: 10px;
+        }
+        .section-header-text-v1 img {
+          width: 36px;
+          height: 36px;
+        }
+        .section-header-text-v1 p {
+          font-size: 24px;
+        }
+        #os-sshtv1 {
+          margin: 16px 0 0;
+          padding: 16px 16px;
+        }
+        #os-sshtv1-img {
+          margin: 32px auto 0 auto;
+        } 
+        .section-sub-heading-text-v1 {
+          font-size: 12px;
+          letter-spacing: .4px;
+        }
+        #btn-view-contact-details {
+          margin: 32px auto;
+          padding: 12px 24px;
+          font-size: 14px;
+          letter-spacing: .5px;
+        }
+        .service-category {
+          padding: 16px 16px 0 16px;
+        }
+        .service-category h1 {
+          font-size: 24px;
+          margin: 0;
+        }
+        .service-header-text {
+          margin: 16px 0;
+          font-size: 18px;
+        }
+        .s-p-text {
+          font-size: 14px;
+        }
+        .s-p-text b {
+          font-size: 15px !important;
+        }
+        .service-card ul li p {
+          font-size: 14px;
+        }
+        .service-card {
+          padding: 16px;
+          margin: 16px 16px 0 16px;
+        }
+        .sc-card-hidden {
+          height: 0;
+          padding: 0;
+        }
+        .sc-hidden {
+          height: 0;
+          padding: 0;
+          margin: 0;
+        }
+        .service-row {
+          margin: 0;
+          flex-direction: column;
+        }
+        #our-services-cta {
+          flex-direction: column;
+        }
+
+        /* Process */
+        #our-process {
+          margin: 76px 0 44px 0;
+        }
+        .processes {
+          flex-direction: column;
+          gap: 16px;
+          padding: 32px 0;
+        }
+        #process-tagline {
+          padding: 16px 32px;
+          margin-top: 32px;
+          margin-bottom: 48px;
+          width: calc(100% - 64px);
+          flex-direction: column;
+        }
+        #process-tagline p {
+          margin: 0;
+          font-size: 13px;
+          text-align: center;
+          line-height: 18px;
+        }
+        #process-tagline img {
+          width: 60px;
+          height: 60px;
+        }
+        .ps-img {
+          width: 48px;
+          height: 48px;
+        }
+        .process-card {
+          width: 220px;
+        }
+        .process-card img {
+          width: 40px;
+          height: 40px;
+        }
+        .ps-tagline-text {
+          font-size: 14px;
+          padding: 0 32px;
+        }
+        .ps-next {
+          display: none;
+        }
+        .pc-header-text {
+          width: 228px;
+          font-size: 18px;
+        }
+        .pc-body-text {
+          width: 228px;
+          font-size: 14px;
+        }
+        #stack-marquee {
+          width: 100%;
+          gap: 24px;
+          padding: 32px 12px;
+          flex-wrap: wrap;
+          border-radius: 0;
+        }
+        #stack-marquee img {
+          width: 40px;
+          height: 40px;
+          flex: 0 0 24%;
+        }
+        .btn-service-nav {
+          font-size: 24px;
+          letter-spacing: .5px;
+        }
+
+        /* Contact */
+        #contact-us {
+          height: fit-content;
+        }
+        .cu-bg {
+          height: 180px;
+          background-position: center;
+        }
+        .cu-wrapper {
+          padding: 64px 0;
+        }
+        .cu-card {
+          width: 100%;
+          height: fit-content
+        }
+        .cu-card:first-child {
+          margin-bottom: 32px;
+        }
+        #cu-holder {
+          flex-direction: column;
+        }
+        .cu-header {
+          width: calc(100% - 32px);
+          margin: 0 auto 24px auto;
+          gap: 12px;
+        }
+        .cf-field {
+          width: 100%;
+        }
+        .cf-field input {
+          display: block;
+          width: calc(100% - 24px);
+          height: calc(48px - 24px);
+        }
+        .cf-field textarea {
+          width: calc(100% - 24px);
+          max-width: calc(100% - 24px);
+          height: calc(180px - 24px);
+        }
+        #btn-send-message {
+          width: 100%;
+        }
+        #contact-form {
+          width: 100%;
+        }
+
+        /* Core Values */
+        #core-values {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          overflow: hidden;
+          height: 800px;
+        }
+        #cv-holder {
+          flex-direction: column;
+          width: calc(100% - 32px);
+        }
+        .cv-card {
+          width: 100%;
+        }
+        #cv-bg {
           width: 1120px;
         }
         .cv-sub-heading-text {
@@ -1230,9 +1560,64 @@
 
         /* Footer */
         .footer-wrapper {
-          max-width: 100%;
-          min-width: 500px;
+          width: calc(100% - 32px);
         }
+        .f-holder {
+          justify-content: start;
+        }
+      }
+
+      /* Mobile menu */
+      #mobile-menu-bar {
+        display: none;
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgb(34, 34, 34);
+      }
+      #mobile-menu-bar ul {
+        margin: 0;
+        padding: 128px 0 64px 32px;
+      }
+      #mobile-menu-bar ul li {
+        list-style: none;
+        margin-top: 16px;
+      }
+      #mobile-menu-bar ul li a {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 18px;
+        letter-spacing: .5px;
+      }
+      #mobile-menu-bar ul li button {
+        margin-top: 64px;
+        color: #ffffff;
+        background-color: #ff6600;
+        padding: 16px;
+        border: none;
+        border-radius: 2px;
+        letter-spacing: .5px;
+        font-size: 18px;
+      }
+      #btn-mobile-menu-close {
+        display: none;
+        float: right;
+        margin-right: 8px;
+        font-size: 64px;
+        border: none;
+        background-color: transparent;
+        color: #ffffff;
+      }
+      .show-mobile-menu-bar {
+        display: block !important;
+      }
+      #btn-mobile-menu {
+        font-size: 24px;
+        border: none;
+        background-color: transparent;
+        color: #ffffff;
       }
 
       /* Animation */
@@ -1278,9 +1663,9 @@
         }
       }
       .pulse {
-            animation: pulse 1s infinite;
-            animation-timing-function: linear;
-        }
+        animation: pulse 1s infinite;
+        animation-timing-function: linear;
+      }
     </style>
   </head>
   <body>
@@ -1289,7 +1674,7 @@
       <header>
         <div class="header-wrapper">
           <img id="brand-logo" src="assets/images/Tech-savvy.svg" alt="logo" onclick="location.href='#banner'"/>
-          <ul id="menu-bar">
+          <ul id="menu-bar" class="mb-toggle-mobile">
             <li>
               <a href="#hero-tagline">Our Services</a>
             </li>
@@ -1303,6 +1688,35 @@
               <button onclick="location.href='#contact-us'" id="btn-contact-us">Contact Us</button>
             </li>
           </ul>
+
+          <button id="btn-mobile-menu" onclick="showMobileMenu()">&#9776;</button>
+
+          <!-- Mobile Menu Bar -->
+          <div id="mobile-menu-bar">
+            <button id="btn-mobile-menu-close" onclick="closeMobileMenu()">&times;</button>
+            <ul>
+              <li>
+                <a onclick="mobileMenuRedirect('#hero-tagline')">Our Services</a>
+              </li>
+              <li>
+                <a onclick="mobileMenuRedirect('#our-services-cta')">Our Process</a>
+              </li>
+              <li>
+                <a onclick="mobileMenuRedirect('#core-values')">Core Values</a>
+              </li>
+              <br>
+              <br>
+              <li>
+                <a>Privacy Policy</a>
+              </li>
+              <li>
+                <a>Terms of Use</a>
+              </li>
+              <li>
+                <button onclick="mobileMenuRedirect('#contact-us')" id="mobile-btn-contact-us">Contact Us</button>
+              </li>
+            </ul>
+          </div>
         </div>
       </header>
       <div id="hero-section">
@@ -1353,9 +1767,9 @@
 
       <img id="os-sshtv1-img" src="assets/images/streamline-plump_leaf-protect-solid.svg" alt="client-property-protection"/>
       <p id="os-sshtv1" class="section-sub-heading-text-v1">
-        <span class="quote">“ </span>
+        <!-- <span class="quote">“ </span> -->
         Public portfolios compromise client advantage. You can ask for a private, tailored demonstration.
-        <span class="quote"> ”</span>
+        <!-- <span class="quote"> ”</span> -->
       </p>
 
       <button onclick="location.href='#contact-us'" id="btn-view-contact-details">View Contact Details</button>
@@ -1414,7 +1828,7 @@
         </div>
 
         <div class="service-row">
-          <div class="service-category"></div>
+          <div class="service-category sc-card-hidden"></div>
           <div class="service-card vsc">
             <img src="assets/images/ion_magnet-outline.svg" alt="landing-page-development"/>
             <p class="service-header-text">Landing Page Development</p>
@@ -1461,13 +1875,13 @@
         </div>
 
         <div class="service-row">
-          <div class="service-category"></div>
+          <div class="service-category sc-card-hidden"></div>
           <div class="service-card vsc">
             <img src="assets/images/healthicons_group-discussion-meeting-outline.svg" alt="project-discovery-session"/>
             <p class="service-header-text">Project Discovery Session</p>
             <p class="s-p-text">
-              <b>Map & Define</b> your project requirements and review at
-              <b>NO COST</b> (Prototyping is not included).
+              <b>Map & Define</b> your project requirements (<i>Prototyping is not included</i>), and review at
+              <b>NO COST</b>.
             </p>
             <ul>
               <li>
@@ -1483,37 +1897,37 @@
           </div>
           <div class="service-card sc-hidden"></div>
         </div>
-      </div>
 
-      <div class="service-row">
-        <div class="service-category">
-          <h1>Technical Support<br>Services</h1>
-        </div>
         <div class="service-row">
-          <div class="service-card vsc" id="tss">
-            <img src="assets/images/garden_headset-sparkle-stroke-16.svg" alt="on-site-or-remote-technical-support"/>
-            <p class="service-header-text">On-Site or Remote Technical Support</p>
-            <p class="s-p-text">
-              <b>Fix, Set Up, Secure, and Support</b> critical business
-              infrastructure such as emails, business essential apps
-              for non-technical teams.
-            </p>
-            <ul>
-              <li>
-                <p><b>Resolve & Restore</b> core operations, hardware devices, and functionality.</p>
-              </li>
-              <li>
-                <p><b>Deploy & Migrate</b> critical platforms like (emails) smooth and secure.</p>
-              </li>
-              <li>
-                <p><b>Guide & Empower</b> non-technical users through application setup & usage instructions.</p>
-              </li>
-              <li>
-                <p><b>Streamline & Optimize</b> computer application and user worflow.</p>
-              </li>
-            </ul>
+          <div class="service-category">
+            <h1>Technical Support<br>Services</h1>
           </div>
-          <div class="service-card sc-hidden"></div>
+          <div class="service-row">
+            <div class="service-card vsc" id="tss">
+              <img src="assets/images/garden_headset-sparkle-stroke-16.svg" alt="on-site-or-remote-technical-support"/>
+              <p class="service-header-text">On-Site or Remote Technical Support</p>
+              <p class="s-p-text">
+                <b>Fix, Set Up, Secure, and Support</b> critical business
+                infrastructure such as emails, business essential apps
+                for non-technical teams.
+              </p>
+              <ul>
+                <li>
+                  <p><b>Resolve & Restore</b> core operations, hardware devices, and functionality.</p>
+                </li>
+                <li>
+                  <p><b>Deploy & Migrate</b> critical platforms like (emails) smooth and secure.</p>
+                </li>
+                <li>
+                  <p><b>Guide & Empower</b> non-technical users through application setup & usage instructions.</p>
+                </li>
+                <li>
+                  <p><b>Streamline & Optimize</b> computer application and user worflow.</p>
+                </li>
+              </ul>
+            </div>
+            <div class="service-card sc-hidden"></div>
+          </div>
         </div>
       </div>
 
@@ -1534,8 +1948,7 @@
       <div id="process-tagline">
         <img src="assets/images/arcticons_gymrun.svg" alt="gym-run"/>
         <p>
-          We strive to improve how we handle project boundaries, learn and adapt<br>
-          every engagement to deliver the expected results.
+          We strive to improve how we handle project boundaries, learn and adapt every engagement to deliver the expected results.
         </p>
       </div>
 
@@ -1581,8 +1994,8 @@
           </div>
         </div>
         <div class="op-cta">
-          <button id="btn-our-services" onclick="location.href='#hero-tagline'"><img src="assets/images/lets-icons_navigate-light.svg"/> Services</button>
-          <button id="btn-our-services" onclick="location.href='#contact-us'"><img style="transform: scaleY(1);" src="assets/images/lets-icons_navigate-light.svg"/> Inquire</button>
+          <button class="btn-service-nav" onclick="location.href='#hero-tagline'"><img src="assets/images/lets-icons_navigate-light.svg"/> Services</button>
+          <button class="btn-service-nav" onclick="location.href='#contact-us'"><img style="transform: scaleY(1);" src="assets/images/lets-icons_navigate-light.svg"/> Inquire</button>
         </div>
       </div>
 
@@ -1646,8 +2059,8 @@
           </div>
         </div>
         <div class="op-cta">
-          <button id="btn-our-services" onclick="location.href='#hero-tagline'"><img src="assets/images/lets-icons_navigate-light.svg"/> Services</button>
-          <button id="btn-our-services" onclick="location.href='#contact-us'"><img style="transform: scaleY(1);" src="assets/images/lets-icons_navigate-light.svg"/> Inquire</button>
+          <button class="btn-service-nav" onclick="location.href='#hero-tagline'"><img src="assets/images/lets-icons_navigate-light.svg"/> Services</button>
+          <button class="btn-service-nav" onclick="location.href='#contact-us'"><img style="transform: scaleY(1);" src="assets/images/lets-icons_navigate-light.svg"/> Inquire</button>
         </div>
       </div>
     </div>
@@ -1690,7 +2103,7 @@
                 <p>inquiry@tech-savvy.asia</p>
               </div>
               <div id="btn-messenger-holder">
-                <button id="btn-messenger"><img src="assets/images/mingcute_messenger-fill.svg" alt="messenger"/> Message us on facebook</button>
+                <button id="btn-messenger"><img src="assets/images/mingcute_messenger-fill.svg" alt="messenger"/> Messenger</button>
               </div>
             </div>
           </div>
@@ -1794,7 +2207,19 @@
     </div>
 
     <script>
-      
+      function showMobileMenu() {
+        let mobileMenuElement = document.getElementById('mobile-menu-bar');
+        mobileMenuElement.classList.add('show-mobile-menu-bar')
+      }
+      function closeMobileMenu() {
+        let mobileMenuElement = document.getElementById('mobile-menu-bar');
+        mobileMenuElement.classList.remove('show-mobile-menu-bar')
+      }
+      function mobileMenuRedirect(elementName) {
+        location.href = elementName
+
+        closeMobileMenu()
+      }
     </script>
   </body>
 </html>
