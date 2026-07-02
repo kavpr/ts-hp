@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Tech-savvy</title>
     <link href="assets/font/Outfit/Outfit-VariableFont_wght.ttf" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
     <style media="screen">
       html, body {
         background-color: #0b0b0b;
@@ -14,7 +18,16 @@
         margin: 0;
         padding: 0;
         scroll-behavior: smooth;
-        
+      }
+
+      .h-captcha {
+        margin-top: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #000000d3;
+        padding: 12px;
+        border-radius: 4px;
       }
 
       /* Section Styles */
@@ -108,15 +121,26 @@
         margin: 0 auto;
       }
       #os-sshtv1 {
-        background-color: rgb(0, 81, 255);
+        /* background-color: rgb(0, 81, 255); */
         /* padding: 16px 0; */
+        /* margin: 0; */
+        /* min-height: 80vh; */
+        background-color: #060913;
+        /* Dark teal tint with a clean repeatable tech grid pattern */
+        background-image: 
+          radial-gradient(ellipse at top, rgba(13, 148, 136, 0.2), transparent 50%),
+          url("data:image/svg+xml,%3Csvg xmlns='http://w3.org' width='60' height='60' viewBox='0 0 60 60'%3E%3Cpath d='M0 0h30v30H0zm30 30h30v30H30z' fill='%23ffffff' fill-opacity='.015'/%3E%3Cpath d='M30 0h30v30H30zM0 30h30v30H0z' fill='%2300f2fe' fill-opacity='.01'/%3E%3C/svg%3E");
+        background-size: 100% 100%, 60px 60px;
+        background-repeat: no-repeat, repeat;
+        background-position: center;
+        letter-spacing: .5px;
       }
       #os-sshtv1-img {
         display: block;
         margin: 0 auto;
         object-fit: contain;
-        width: 32px;
-        height: 32px;
+        width: 40px;
+        height: 40px;
       }
       .section-header-text-v1 img {
         object-fit: contain;
@@ -133,14 +157,32 @@
       }
       #btn-view-contact-details {
         display: block;
-        border: 4px solid #3876fa;
         letter-spacing: .5px;
         border-radius: 6px;
         cursor: pointer;
         transition: all ease-in-out 0.3s;
+
+        position: relative;
+        padding: 14px 36px;
+        background: rgba(255, 255, 255, 0.03);
+        color: #00f0ff; /* Tech cyan/neon color */
+        
+        /* Coding/Tech Font Stack */
+        font-family: 'Courier New', Courier, monospace, ui-monospace;
+        font-size: 0.9rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        cursor: pointer;
+        
+        /* Sharp, angular tech cuts instead of rounded corners */
+        border: 1px solid rgba(0, 240, 255, 0.3);
+        clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+        opacity: .8;
+        /* Instant transition for a rigid, mechanical feel */
+        transition: all 0.15s ease;
       }
       #btn-view-contact-details:hover {
-        background-color: #cdcdcd;
+        opacity: 1;
       }
       .btn-service-nav {
         background-color: transparent;
@@ -796,6 +838,7 @@
         }
         #os-sshtv1 {
           padding: 16px 0;
+          font-size: 18px;
         }
         #os-sshtv1-img {
           margin: 48px auto 0 auto;
@@ -811,7 +854,7 @@
           font-size: 24px;
         }
         #btn-view-contact-details {
-          margin: 96px auto 0 auto;
+          margin: 12px auto 0 auto;
           padding: 16px 32px;
           font-size: 14px;
         }
@@ -1009,6 +1052,9 @@
       }
 
       @media screen and (min-width: 768px) and (max-width: 1024px) {
+        #btn-mobile-menu {
+          display: block !important;
+        }
         header {
           width: calc(100% - 32px);
         }
@@ -1055,6 +1101,7 @@
         }
         #os-sshtv1 {
           padding: 16px 0;
+          font-size: 14px;
         }
         #os-sshtv1-img {
           margin: 32px auto 0 auto;
@@ -1277,6 +1324,9 @@
         .mb-toggle-mobile {
           display: none !important;
         }
+        #btn-mobile-menu {
+          display: block !important;
+        }
         #btn-mobile-menu-close {
           display: flex !important;
         }
@@ -1345,6 +1395,7 @@
         #os-sshtv1 {
           margin: 16px 0 0;
           padding: 16px 16px;
+          font-size: 14px;
         }
         #os-sshtv1-img {
           margin: 32px auto 0 auto;
@@ -1575,7 +1626,8 @@
         top: 0;
         height: 100%;
         width: 100%;
-        background-color: rgb(34, 34, 34);
+        background-color: rgba(34, 34, 34, 0.945);
+        transition: .3s all ease-in-out;
       }
       #mobile-menu-bar ul {
         margin: 0;
@@ -1618,6 +1670,7 @@
         border: none;
         background-color: transparent;
         color: #ffffff;
+        display: none;
       }
 
       /* Animation */
@@ -2102,32 +2155,51 @@
                 <img src="assets/images/hugeicons_ai-mail-02.svg" alt="email"/>
                 <p>inquiry@tech-savvy.asia</p>
               </div>
-              <div id="btn-messenger-holder">
+              <!-- <div id="btn-messenger-holder">
                 <button id="btn-messenger"><img src="assets/images/mingcute_messenger-fill.svg" alt="messenger"/> Messenger</button>
-              </div>
+              </div> -->
             </div>
           </div>
           <div class="cu-card cu-card-2">
-            <div id="contact-form">
-              <div class="cf-field">
-                <input type="text" placeholder="Name"/>
+
+            
+
+            <form id="form">
+              
+              <!-- <input type="text" name="name" required>
+              <input type="email" name="email" required>
+              <textarea name="message" required></textarea>
+              <button type="submit">Submit</button> -->
+
+              <div id="contact-form">
+                <!-- <input type="hidden" name="access_key" value="7bb7181d-29a3-4ae0-9d5b-eb889463f832"> -->
+
+                <div class="cf-field">
+                  <input id="input-name" type="text" name="name" required placeholder="Name"/>
+                </div>
+                <div class="cf-field">
+                  <input id="input-email" type="email" name="email" required placeholder="Email address"/>
+                </div>
+                <div class="cf-field">
+                  <textarea id="input-message" name="message" required rows="5" placeholder="Message"></textarea>
+                </div>
+
+                <div class="hcaptcha-field">
+                  <div class="h-captcha" data-captcha="true"></div>
+                </div>
+
+                <div class="cf-field">
+                  <button
+                    id="btn-send-message" 
+                    onclick="sendInquiry(event)"
+                  >
+                    <img src="assets/images/iconoir_send-mail.svg" alt="send-message"/> SEND INQUIRY
+                  </button>
+                </div>
               </div>
-              <div class="cf-field">
-                <input type="text" placeholder="Email address"/>
-              </div>
-              <div class="cf-field">
-                <input type="text" placeholder="Contact Number"/>
-              </div>
-              <div class="cf-field">
-                <input type="text" placeholder="Subject"/>
-              </div>
-              <div class="cf-field">
-                <textarea rows="5" placeholder="Message"></textarea>
-              </div>
-              <div class="cf-field">
-                <button id="btn-send-message"><img src="assets/images/iconoir_send-mail.svg" alt="send-message"/> SEND MESSAGE</button>
-              </div>
-            </div>
+
+            </form>
+
           </div>
         </div>
       </div>
@@ -2206,6 +2278,7 @@
       <!-- EOS -->
     </div>
 
+    <script src="https://web3forms.com/client/script.js" async defer></script>
     <script>
       function showMobileMenu() {
         let mobileMenuElement = document.getElementById('mobile-menu-bar');
@@ -2219,6 +2292,49 @@
         location.href = elementName
 
         closeMobileMenu()
+      }
+
+      async function sendInquiry(e) {
+        try {
+          e.preventDefault();
+
+          // 1. Get the hCaptcha token
+          const hcaptchaResponse = hcaptcha.getResponse();
+
+          // 2. Check if it's empty
+          if (!hcaptchaResponse) {
+            alert("Please complete the captcha challenge before submitting.");
+            return; // Stop the function right here
+          } else {
+            const formData = new FormData(form);
+
+            formData.append("access_key", "7bb7181d-29a3-4ae0-9d5b-eb889463f832")
+            formData.append("name", document.getElementById('input-name').value)
+            formData.append("name", document.getElementById('input-email').value)
+            formData.append("name", document.getElementById('input-message').value)
+
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+              alert("Success! Your message has been sent.");
+
+              document.getElementById('input-name').value = ''
+              document.getElementById('input-email').value = ''
+              document.getElementById('input-message').value = ''
+
+              hcaptcha.reset()
+            } else {
+              alert("Error: " + data.message);
+            }
+          }
+        } catch (error) {
+          alert("Something went wrong. Please check our other communication cannels.");
+        }
       }
     </script>
   </body>
